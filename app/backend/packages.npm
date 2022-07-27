@@ -1,3 +1,5 @@
 joi
 cors
 @types/cors
+boom
+express-async-errors
