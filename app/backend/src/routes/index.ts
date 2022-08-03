@@ -1,11 +1,11 @@
 import { Router } from 'express';
-// import UserRouter from './userRouter';
 import LoginRouter from './loginRouter';
+import TeamsRouter from './teamsRouter';
 
 const indexRouter = Router();
 
-// indexRouter.use('/user', UserRouter);
-
 indexRouter.use('/login', LoginRouter);
+
+indexRouter.use('/teams', TeamsRouter);
 
 export default indexRouter;
