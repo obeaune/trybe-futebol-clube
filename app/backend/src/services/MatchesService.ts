@@ -21,7 +21,8 @@ class TeamsService {
   };
 
   public getById = async (id: number) => {
-    const matchById = await Matches.findAll({ where: { id } });
+    const matchById = await Matches.findOne({ where: { id } });
+    if (!matchById) throw new HttpException(404, 'There is no team with such id!');
     return matchById;
   };
 
