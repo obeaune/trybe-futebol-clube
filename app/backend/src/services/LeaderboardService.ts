@@ -6,7 +6,20 @@ import inOrderLeaderboard from '../utils/organizedLeaderboard';
 class LeaderboardService {
   public getLeaderboard = async () => {
     // all finished games ->
-    const getMatches = await Matches.findAll({ where: { inProgress: false } });
+    const getMatches = await Matches.findAll({
+      where: { inProgress: false },
+      include: [
+        {
+          model: Teams,
+          as: 'teamHome',
+          attributes: ['teamName'],
+        },
+        {
+          model: Teams,
+          as: 'teamAway',
+          attributes: ['teamName'],
+        }],
+    });
 
     // all teams ->
     const getTeams = await Teams.findAll();
