@@ -1,7 +1,7 @@
 import * as bcrypt from 'bcryptjs';
 import * as jwt from 'jsonwebtoken';
 import 'dotenv/config';
-import HttpException from '../shared/HttpException';
+import HttpException from '../utils/HttpException';
 import User from '../database/models/User';
 import IPayload from '../interfaces/IPayload';
 

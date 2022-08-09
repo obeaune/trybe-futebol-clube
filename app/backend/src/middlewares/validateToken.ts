@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import * as jwt from 'jsonwebtoken';
 import 'dotenv/config';
-import HttpException from '../shared/HttpException';
+import HttpException from '../utils/HttpException';
 
 const secret = process.env.JWT_SECRET || 'temporarySecret';
 

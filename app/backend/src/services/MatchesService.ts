@@ -1,6 +1,6 @@
 import Matches from '../database/models/Matches';
 import Teams from '../database/models/Teams';
-import HttpException from '../shared/HttpException';
+import HttpException from '../utils/HttpException';
 
 class TeamsService {
   public allMatches = async () => {

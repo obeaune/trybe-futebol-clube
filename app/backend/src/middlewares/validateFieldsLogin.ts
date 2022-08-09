@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import HttpException from '../shared/HttpException';
+import HttpException from '../utils/HttpException';
 
 const validateUser = (req: Request, _res: Response, next: NextFunction) => {
   const { email, password } = req.body;
