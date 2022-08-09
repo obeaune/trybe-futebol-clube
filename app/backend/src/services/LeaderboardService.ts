@@ -28,7 +28,8 @@ class LeaderboardService {
     const leaderboardUnorganized = getTeams.map((team) => createLeaderboard(team, getMatches));
 
     // returning the finished leaderboard in order ->
-    return inOrderLeaderboard(leaderboardUnorganized);
+    const sorted = inOrderLeaderboard(leaderboardUnorganized);
+    return sorted;
   };
 }
 
